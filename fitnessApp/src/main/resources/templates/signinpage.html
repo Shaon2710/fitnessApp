@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<div align="center">
+
+    <div>
+        <H1>This Is Registation Page</H1>
+    </div>
+    <form th:action="@{/reg_pro}"
+            th:object="${user}"
+            method="post">
+        <div>
+            <div>
+                <label>Name</label>
+                <input type="text" th:field="*{name}" required minlength="3" maxlength="40">
+            </div>
+            <div>
+                <label>E-Mail</label>
+                <input type="email" th:field="*{email}" required minlength="6" maxlength="44">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" th:field="*{password}" required minlength="8" maxlength="20">
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="text" th:field="*{age}" required minlength="1" maxlength="4">
+            </div>
+            <div>
+                <label>Mobile</label>
+                <input type="text" th:field="*{mobile}" required minlength="10" maxlength="14">
+            </div>
+            <div>
+                <label>Location</label>
+                <input type="text" th:field="*{location}" required minlength="5" maxlength="200">
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

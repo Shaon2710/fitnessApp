@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trainer Registation</title>
+</head>
+<body>
+<div align="center">
+
+    <div>
+        <H1>This Is Trainer Registation Page</H1>
+    </div>
+    <form th:action="@{/reg_pro}"
+          th:object="${trainer}"
+          method="post">
+        <div>
+            <div>
+                <label>Name</label>
+                <input type="text" th:field="*{trainer_name}" required minlength="3" maxlength="40">
+            </div>
+            <div>
+                <label>E-Mail</label>
+                <input type="email" th:field="*{trainer_email}" required minlength="6" maxlength="44">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" th:field="*{trainer_password}" required minlength="8" maxlength="20">
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="text" th:field="*{trainer_age}" required minlength="1" maxlength="4">
+            </div>
+            <div>
+                <label>Mobile</label>
+                <input type="text" th:field="*{trainer_mobile}" required minlength="10" maxlength="14">
+            </div>
+            <div>
+                <label>Location</label>
+                <input type="text" th:field="*{trainer_location}" required minlength="5" maxlength="200">
+            </div>
+            <div>
+                <label>Experince </label>
+                <input type="text" th:field="*{trainer_experince}" required minlength="5" maxlength="49">
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
