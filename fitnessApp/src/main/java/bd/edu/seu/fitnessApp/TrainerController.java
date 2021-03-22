@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class TrainerController {
 
     @Autowired
-    private TrainerRepository trepo;
+//    private TrainerRepository trepo;
 
     @GetMapping("/trainer-register")
     public String trainerSignup(Model model){
@@ -19,7 +19,7 @@ public class TrainerController {
     }
     @PostMapping("/reg_pro")
     public String trainerProcessRegistation(Trainer trainer){
-        Trainer save = trepo.save(trainer);
+//        Trainer save = trepo.save(trainer);
 
         return "registerSuccess";
     }
